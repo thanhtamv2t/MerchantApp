@@ -1,0 +1,39 @@
+.page-home{
+	background: #1abc9c;
+}
+.page-home {
+	.login-form{
+		background: #16a085;
+	}
+	.register-btn{
+		color: #fff;
+	}
+	.submit-btn{
+		color:#16a085;
+		background: #ecf0f1;
+		border-radius: 30px!important;
+		padding-top: 15px !important;
+		padding-bottom: 15px !important;
+	}
+	.submit-btn:hover{
+		color: #fff;
+	}
+	.logo{
+		color:#fff;
+		text-shadow:1px 1px 3px 3px #16a085;
+	}
+	.logo:hover{
+		color:#fff;
+		text-shadow:1px 1px 3px 3px #000;
+		cursor: pointer;
+	}
+    ion-item {
+         border-radius: 30px !important;
+         padding-left: 30px !important;
+         font-size: 0.9em;
+         margin-bottom: 10px;
+         border: 1px solid #ffffff;
+         border-bottom: 0px !important;
+         box-shadow: none !important;
+     }
+}

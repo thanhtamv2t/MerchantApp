@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>CodeList</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="page-code-list">
+
+	<ion-list>
+		<ion-item *ngFor="let c of data">
+			<ion-card>
+				<ion-card-content>
+					<ion-row>
+						<ion-col>Tên KH: <b>{{c.user_lastname}}</b></ion-col>
+						<ion-col>Email: <b>{{c.user_email}}</b></ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>Hạn sử dụng: <span class="text-danger">{{c.time_end}}</span></ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col class="text-danger" *ngIf="c.status_history==1">Đã sử dụng</ion-col>
+						<ion-col class="text-success" *ngIf="c.status_history==0">Chưa sử dụng</ion-col>
+					</ion-row>					
+				</ion-card-content>
+			</ion-card>			
+		</ion-item>
+	</ion-list>
+
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Chương trình của bạn</ion-title>   
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar (ionInput)="getItems($event)" placeholder="Tìm kiếm"></ion-searchbar>
+  <ion-card  *ngFor="let l of ls">
+  <img src="https://tmdt.tt2t.info/assets/uploads/files/post/{{l.pro_post_image}}"/>
+  <ion-card-content>
+    <ion-card-title>
+      {{l.pro_name}}
+      </ion-card-title>
+    <p>
+{{l.pro_address}}
+    </p>
+  </ion-card-content>
+  <ion-row>
+      <!-- <ion-col><button (click)="codeConfirm(l.pro_id)" ion-button block>Nhập mã</button></ion-col> -->
+      <ion-col><button (click)="qrConfirm(l.pro_id)" ion-button block><ion-icon color="light" name="qr-scanner"></ion-icon>&nbsp;Quét mã</button></ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col><button (click)="CustomerList(l.pro_id)" ion-button block>Danh sách khách hàng</button></ion-col>    
+  </ion-row>
+</ion-card>
+</ion-content>
